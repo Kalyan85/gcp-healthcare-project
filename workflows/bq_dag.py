@@ -5,7 +5,7 @@ from airflow.utils.dates import days_ago
 from airflow.providers.google.cloud.operators.bigquery import BigQueryInsertJobOperator
 
 # Define constants
-PROJECT_ID = "probable-scout-476708-i5"
+PROJECT_ID = "healthcare-project-211225"
 LOCATION = "US"
 SQL_FILE_PATH_1 = "/home/airflow/gcs/data/BQ/bronze.sql"
 SQL_FILE_PATH_2 = "/home/airflow/gcs/data/BQ/silver.sql"
@@ -22,7 +22,7 @@ GOLD_QUERY = read_sql_file(SQL_FILE_PATH_3)
 
 # Define default arguments
 ARGS = {
-    "owner": "SATISH REDDY",
+    "owner": "Dasam Kalyan",
     "start_date": None,
     "depends_on_past": False,
     "email_on_failure": False,
